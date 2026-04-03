@@ -1,0 +1,184 @@
+<p dir="ltr">&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="id"&gt;<br>
+&lt;head&gt;<br>
+&nbsp; &lt;meta charset="UTF-8"&gt;<br>
+&nbsp; &lt;title&gt;Geprek Mami A3&lt;/title&gt;<br>
+&nbsp; &lt;style&gt;<br>
+&nbsp;&nbsp;&nbsp; body {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-family: Arial;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background: #f2f2f2;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 0;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .container {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; max-width: 420px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: auto;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background: white;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 20px;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; h2 {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .menu-item {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; display: flex;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; justify-content: space-between;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 10px 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; align-items: center;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .qty {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; display: flex;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; align-items: center;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; button {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 5px 10px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin: 0 5px;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .total {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size: 18px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-top: 15px;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .order-btn {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; width: 100%;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; background: green;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color: white;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; padding: 12px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; border: none;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-top: 10px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size: 16px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; border-radius: 5px;<br>
+&nbsp;&nbsp;&nbsp; }</p>
+<p dir="ltr">&nbsp;&nbsp;&nbsp; .note {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; font-size: 12px;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; color: gray;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text-align: center;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; margin-top: 10px;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; &lt;/style&gt;<br>
+&lt;/head&gt;</p>
+<p dir="ltr">&lt;body&gt;</p>
+<p dir="ltr">&lt;div class="container"&gt;<br>
+&nbsp; &lt;h2&gt;&#127869;&#65039; Geprek Mami A3&lt;/h2&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Ayam Geprek To'/Paket&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('geprek', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="geprek"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('geprek', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Ayam Lalapan To'/Paket&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('lalapan', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="lalapan"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('lalapan', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Ayam Bakar To'/Paket&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('bakar', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="bakar"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('bakar', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Mie Ayam&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('mieayam', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="mieayam"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('mieayam', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Mie Cakalang&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('miecakalang', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="miecakalang"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('miecakalang', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Mie Bungkus&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('miebungkus', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="miebungkus"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('miebungkus', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Bakso Bakar&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('bakso', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="bakso"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('bakso', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="menu-item"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;span&gt;Nasi Goreng&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="qty"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('nasgor', -1)"&gt;-&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;span id="nasgor"&gt;0&lt;/span&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;button onclick="ubah('nasgor', 1)"&gt;+&lt;/button&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;br&gt;<br>
+&nbsp; Nama: &lt;input type="text" id="nama" placeholder="Nama kamu"&gt;&lt;br&gt;&lt;br&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="total"&gt;<br>
+&nbsp;&nbsp;&nbsp; Total: Rp &lt;span id="total"&gt;0&lt;/span&gt;<br>
+&nbsp; &lt;/div&gt;</p>
+<p dir="ltr">&nbsp; &lt;button class="order-btn" onclick="pesan()"&gt;Pesan via WhatsApp&lt;/button&gt;</p>
+<p dir="ltr">&nbsp; &lt;div class="note"&gt;<br>
+&nbsp;&nbsp;&nbsp; *Harga delivery tergantung jarak<br>
+&nbsp; &lt;/div&gt;<br>
+&lt;/div&gt;</p>
+<p dir="ltr">&lt;script&gt;<br>
+let harga = {<br>
+&nbsp; geprek: 15000,<br>
+&nbsp; lalapan: 15000,<br>
+&nbsp; bakar: 17000,<br>
+&nbsp; mieayam: 12000,<br>
+&nbsp; miecakalang: 13000,<br>
+&nbsp; miebungkus: 10000,<br>
+&nbsp; bakso: 10000,<br>
+&nbsp; nasgor: 15000<br>
+};</p>
+<p dir="ltr">let jumlah = {<br>
+&nbsp; geprek: 0,<br>
+&nbsp; lalapan: 0,<br>
+&nbsp; bakar: 0,<br>
+&nbsp; mieayam: 0,<br>
+&nbsp; miecakalang: 0,<br>
+&nbsp; miebungkus: 0,<br>
+&nbsp; bakso: 0,<br>
+&nbsp; nasgor: 0<br>
+};</p>
+<p dir="ltr">function ubah(menu, nilai) {<br>
+&nbsp; jumlah[menu] += nilai;<br>
+&nbsp; if (jumlah[menu] &lt; 0) jumlah[menu] = 0;</p>
+<p dir="ltr">&nbsp; document.getElementById(menu).innerText = jumlah[menu];<br>
+&nbsp; hitung();<br>
+}</p>
+<p dir="ltr">function hitung() {<br>
+&nbsp; let total = 0;<br>
+&nbsp; for (let m in jumlah) {<br>
+&nbsp;&nbsp;&nbsp; total += jumlah[m] * harga[m];<br>
+&nbsp; }<br>
+&nbsp; document.getElementById("total").innerText = total;<br>
+}</p>
+<p dir="ltr">function pesan() {<br>
+&nbsp; let nama = document.getElementById("nama").value;<br>
+&nbsp; let text = "Halo, saya " + nama + "%0A";<br>
+&nbsp; text += "Pesanan:%0A";</p>
+<p dir="ltr">&nbsp; for (let m in jumlah) {<br>
+&nbsp;&nbsp;&nbsp; if (jumlah[m] &gt; 0) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text += "- " + m + " x" + jumlah[m] + "%0A";<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; }</p>
+<p dir="ltr">&nbsp; text += "Total: Rp " + document.getElementById("total").innerText;<br>
+&nbsp; text += "%0A(Harga delivery tergantung jarak)";</p>
+<p dir="ltr">&nbsp; let url = "https://wa.me/628XXXXXXXXXX?text=" + text;</p>
+<p dir="ltr">&nbsp; window.open(url);<br>
+}<br>
+&lt;/script&gt;</p>
+<p dir="ltr">&lt;/body&gt;<br>
+&lt;/html&gt;</p>
